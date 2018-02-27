@@ -1,4 +1,4 @@
--- entidade para representação de pessoas
+-- entidade para representa?o de pessoas
 create table pessoa(
 	  id		int primary key not null identity(1, 1)
 	, nome		varchar(100) not null
@@ -8,22 +8,23 @@ create table pessoa(
 )
 go
 
--- entidade para representação de municípios
+-- entidade para representa?o de munic?ios
 create table municipio (
 	  id	int primary key not null identity(1, 1)
 	, nome	varchar(50)
 )
 go
 
--- entidade para representação de nota fiscal
+-- entidade para representa?o de nota fiscal
 create table nota (
 	  id			int primary key not null identity(1, 1)
 	, codigo		char(12) not null
 	, idMunicipio	int foreign key references municipio(id) not null
 )
 go
+-- aqui estÃ¡ mais uma alteraÃ§Ã£o (teste)
 
--- entidade para representação de vendas
+-- entidade para representa?o de vendas
 create table venda (
 	  id		int primary key not null identity(1, 1)
 	, idPessoa	int foreign key references pessoa(id) not null
