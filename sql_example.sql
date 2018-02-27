@@ -6,6 +6,7 @@ create table pessoa(
 	, telefone	varchar(15)
 )
 go
+-- alteração
 
 create table municipio (
 	  id	int primary key not null identity(1, 1)
